@@ -1,4 +1,4 @@
-# Trying Web Dev Using Golang Fiber
+# OAuth Implementation Example using Golang Fiber
 
 A simple example demonstrating the implementation of OAuth2 for user authentication in a website using Golang Fiber, with the help of the Goth module. This example showcases the use of Google and GitHub as authentication providers.
 
