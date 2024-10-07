@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .error-container {
+            text-align: center;
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            color: #dc3545;
+        }
+
+        .error-message {
+            font-size: 24px;
+            color: #343a40;
+        }
+
+        .error-description {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #6c757d;
+        }
+
+        .back-button {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="error-container">
+        <div class="error-code">{{ .Code }}</div>
+        <div class="error-message">{{ .Error }}</div>
+        {{if eq .Code 404}}
+        <div class="error-description">Sorry, the page you are looking for does not exist.</div>
+        {{end}}
+        <a href="/" class="btn btn-primary back-button">Go Back Home</a>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
